@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <script>
     // https://github.com/guest271314/GraphInterest 3-11-2018
     // https://math.stackexchange.com/q/2528122
     async function* graphInterest({
@@ -103,8 +99,3 @@
         console.log(prop)
       }
     })();
-  </script>
-</head>
-<body>
-</body>
-</html>
