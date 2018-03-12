@@ -1,2 +1,2 @@
 # GraphInterest
-Calculate continuous compounding interest with additions
+Calculate compounding interest with additions
