@@ -59,7 +59,6 @@
       time: 1,
       n: 12
     });
-    // console.log(accruedInterest.next().value, accruedInterest.next(10).value);
     (async() => {
       const pool = new Map;
       pool.set(pool.size, await Promise.all([2.5, 2.5, 2.5, 1, 1, .5]));
