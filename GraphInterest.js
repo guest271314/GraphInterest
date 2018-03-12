@@ -1,20 +1,18 @@
     // https://github.com/guest271314/GraphInterest 3-11-2018
     // https://math.stackexchange.com/q/2528122
     async function* graphInterest({
-      principal = 0, // initial principal
+        principal = 0, // initial principal
         rate = 0, // rate as decimal
         time = 0, // time as years
         n = 360, // periods per year to compound interest
         continuous = false
     } = {}) {
-
       if (!time || !principal) {
         return new ReferenceError(`time needs to be defined`);
       };
       const [N, P] = [360, new WeakMap];
       // banker's year constant, , WeakMap of Set having values `{principal, day, year}` having `.length` `n` per `time`
       // `time` : years
-
       // while (true) {
       for (let t = 0, day = 0, days = 0, year = t + 1, add; t < time; t++, year++) {
         const key = {
@@ -51,14 +49,10 @@
           }
         }
         // set initial `principal` for next `time` : year
-        ;
-        ({
-          principal
-        } = [...P.get(current)][P.get(current).size - 1]);
+        ;({principal} = [...P.get(current)][P.get(current).size - 1]);
       }
       // }
-    }
-
+    };
     let accruedInterest = graphInterest({
       principal: 1,
       rate: 0.03,
