@@ -11,7 +11,7 @@
         return new ReferenceError(`time needs to be defined`);
       };
       const [N, P] = [360, new WeakMap];
-      // banker's year constant, , WeakMap of Set having values `{principal, day, year}` having `.length` `n` per `time`
+      // banker's year constant, WeakMap of Set having values `{principal, day, year}` having `.length` `n` per `time`
       // `time` : years
       // while (true) {
       for (let t = 0, day = 0, days = 0, year = t + 1, add; t < time; t++, year++) {
