@@ -22,7 +22,7 @@
         ]);
         P.set(current, current.get(key));
         let addition = yield {
-          year, day: 0, days, principal
+          year, day, days, principal
         };
         // `p` number of `n` periods per year to compound `principal`
         for (let p = 0; p < n; p++) {
@@ -87,7 +87,7 @@
         console.log(value, done)
       });
       */
-      for await (let prop of accruedInterest) {
+      for await (const prop of accruedInterest) {
         console.log(prop)
       }
     })();
