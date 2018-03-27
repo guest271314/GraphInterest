@@ -60,6 +60,7 @@
     });
     (async() => {
       const pool = new Map;
+      // addition
       pool.set(pool.size, await Promise.all([2.5, 2.5, 2.5, 1, 1, .5]));
       await accruedInterest.next().then(({
         value,
